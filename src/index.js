@@ -128,6 +128,7 @@ function changeButtonColor() {
   } else if (month >= 8 && month <= 10) { 
     seasonColor.style.backgroundColor = "#eb4d4b";
     searchButton.style.backgroundColor= "#eb4d4b"; 
+      console.log('autumn')
 
   } else { 
       console.error('błąd')
