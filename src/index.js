@@ -100,3 +100,40 @@ function refreshWeather(response) {
   searchFormElement.addEventListener("submit", handleSearchSubmit);
   
   searchCity("Paris");
+  
+function changeButtonColor() {
+  let date = new Date();
+  let month = date.getMonth();
+
+  let searchButton = document.querySelector(".search-form-button");
+  let seasonColor = document.querySelector('body');
+
+  if (month >= 0 && month <= 1 || month === 11) { 
+    
+    seasonColor.style.backgroundColor = "#4a69bd";
+      searchButton.style.backgroundColor = "#4a69bd"; 
+    console.log('winter')
+  } else if (month >= 2 && month <= 4) { 
+    seasonColor.style.backgroundColor = "#78e08f" ;
+  searchButton.style.backgroundColor = "#78e08f" ;
+  
+    
+      console.log('spring')
+
+  } else if (month >= 5 && month <= 7) { 
+    seasonColor.style.backgroundColor = "#f0932b";
+    searchButton.style.backgroundColor= "#f0932b"; 
+      console.log('summer')
+
+  } else if (month >= 8 && month <= 10) { 
+    seasonColor.style.backgroundColor = "#eb4d4b";
+    searchButton.style.backgroundColor= "#eb4d4b"; 
+
+  } else { 
+      console.error('błąd')
+
+  }
+}
+
+
+changeButtonColor();
